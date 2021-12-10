@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo List</title>
+</head>
+<body onload="updateList()">
+    
+    <header>
+        <h1>To-Do List</h1>
+    </header>
+
+    <!-- The main is going to be splitted into three different sections: newTodo (which is going to be where the user can save new tasks), todoList (the list itself) and a moreActions div where different functionalities can be added -->
+
+    <main>
+        <div id="newTodo">
+            <h2><label for="todoText">What needs to be done?</label></h2>
+            <form id="form">
+                <input type="text" name="todo" id="todoText" placeholder="Type here" autocomplete="off" required>
+                <button type="submit" id="saveBtn">Add</button>
+            </form>
+
+        </div>
+        
+        <hr>
+        
+        <div id="todoList">
+            <h2 id="tasksCompleted">x out of y completed</h2>
+            
+            <ul id="tasksList">
+                <li>
+                    <input type="checkbox" name="taskComplete" id="taskComplete">
+                    Create New Tasks
+                    <img src="assets/editIcon.png" alt="edit item">
+                    <img src="assets/cancelIcon.png" alt="cancel item">
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div id="moreActions">
+            <button id="checkAllBtn">Check<br>All</button>
+            <button id="removeCompleted">Remove Completed</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
