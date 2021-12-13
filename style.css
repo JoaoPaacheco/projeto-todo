@@ -24,6 +24,8 @@ main {
     box-sizing: border-box;
     width: 90vw;
     max-width: 40rem;
+    max-height: 75%;
+    overflow: auto;
     position: absolute;
     top: 50%;
     left: 50%;
