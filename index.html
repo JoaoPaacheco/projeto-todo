@@ -18,9 +18,9 @@
     <main>
         <div id="newTodo">
             <h2><label for="todoText">What needs to be done?</label></h2>
-            <form id="form">
-                <input type="text" name="todo" id="todoText" placeholder="Type here" autocomplete="off" required>
-                <button type="submit" id="saveBtn">Add</button>
+            <form id="form" onsubmit="return false">
+                <input type="text" name="todo" id="todoText" placeholder="Type here" autocomplete="off">
+                <button id="saveBtn">Add</button>
             </form>
 
         </div>

@@ -43,13 +43,14 @@ function deleteTask(index) {
 // Saving tasks
 
 function saveTaskBtn(event) {
-    if (document.getElementById("form").reportValidity()) {
-        let text = document.getElementById("todoText")
+    let text = document.getElementById("todoText")
+    if (document.getElementById("todoText").value) {
         let task = {
             todo: text.value,
             done: false
         }
         addTask(task)
+        text.value = ""
         updateList()
     }
 }
